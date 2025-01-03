@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+## Type of project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is React-based web application using Create React App as the base,
+with internationalization support, authentication/authorization.
+The project uses JSON Server as a mock backend, which is configured to serve data from `db.json`. 
 
 ## Available Scripts
 
