@@ -1,0 +1,214 @@
+{
+  "users": [
+    {
+      "email": "aya@hotmail.com",
+      "password": "$2a$10$y3VL.ByVW3nJxoy3AuymH.53vCpypTXr5diUWwak0N5PZZvg6BxTm",
+      "fullname": "aya benassila",
+      "role": "student",
+      "courses": [
+        6,
+        7,
+        8,
+        16,
+        10
+      ],
+      "id": 2
+    },
+    {
+      "email": "jaouad@hotmail.com",
+      "password": "$2a$10$4vBiL7g3NB/A7BzishdQgOPfe8pk8d65HXXLboijxyHymr/GkyI.m",
+      "fullname": "jaouad benassila",
+      "role": "teacher",
+      "courses": [
+        5,
+        8,
+        12,
+        19,
+        16
+      ],
+      "id": 3
+    }
+  ],
+  "courses": [
+    {
+      "id": 2,
+      "price": 249,
+      "category": "Web Development",
+      "maxEnrollment": 25,
+      "level": "Beginner",
+      "description": "Build your first website using HTML, CSS, and JavaScript.",
+      "title": "Web Development Fundamentals",
+      "duration": 15
+    },
+    {
+      "id": 4,
+      "title": "Mobile App Development with Flutter",
+      "description": "Create cross-platform mobile applications with Flutter.",
+      "level": "Intermediate",
+      "category": "Mobile Development",
+      "price": 399,
+      "duration": 8,
+      "maxEnrollment": 15
+    },
+    {
+      "id": 5,
+      "title": "Introduction to Cybersecurity",
+      "description": "Learn the fundamentals of cybersecurity and how to protect systems.",
+      "level": "Beginner",
+      "category": "Cybersecurity",
+      "price": 299,
+      "duration": 12,
+      "maxEnrollment": 30
+    },
+    {
+      "id": 6,
+      "price": 399,
+      "category": "Machine Learning",
+      "maxEnrollment": 26,
+      "level": "Beginner",
+      "description": "Get started with machine learning concepts and algorithms.",
+      "title": "Machine Learning for Beginners",
+      "duration": 16
+    },
+    {
+      "id": 7,
+      "title": ".NET Development Essentials",
+      "description": ".NET framework basics for building applications.",
+      "level": "Intermediate",
+      "category": ".NET Development",
+      "price": 349,
+      "duration": 10,
+      "maxEnrollment": 20
+    },
+    {
+      "id": 8,
+      "title": "Introduction to Graphic Design",
+      "description": "Learn the principles of graphic design using Adobe Photoshop.",
+      "level": "Beginner",
+      "category": "Graphic Design",
+      "price": 249,
+      "duration": 8,
+      "maxEnrollment": 30
+    },
+    {
+      "id": 9,
+      "title": "Digital Marketing Basics",
+      "description": "Understand the fundamentals of digital marketing strategies.",
+      "level": "Beginner",
+      "category": "Marketing",
+      "price": 199,
+      "duration": 6,
+      "maxEnrollment": 40
+    },
+    {
+      "id": 10,
+      "price": 299,
+      "category": "Cloud Computing",
+      "maxEnrollment": 35,
+      "level": "Beginner",
+      "description": "Explore cloud computing concepts and services.",
+      "title": "Introduction to Cloud Computing",
+      "duration": 122
+    },
+    {
+      "id": 11,
+      "title": "Python for Data Analysis",
+      "description": "Learn how to use Python for data analysis and visualization.",
+      "level": "Intermediate",
+      "category": "Data Science",
+      "price": 349,
+      "duration": 10,
+      "maxEnrollment": 25
+    },
+    {
+      "id": 12,
+      "title": "Game Development with Unity",
+      "description": "Create engaging games using Unity game engine.",
+      "level": "Intermediate",
+      "category": "Game Development",
+      "price": 399,
+      "duration": 14,
+      "maxEnrollment": 15
+    },
+    {
+      "id": 13,
+      "title": "Introduction to SQL",
+      "description": "Learn the basics of SQL for database management.",
+      "level": "Beginner",
+      "category": "Database Management",
+      "price": 199,
+      "duration": 8,
+      "maxEnrollment": 30
+    },
+    {
+      "id": 14,
+      "title": "Ethical Hacking Fundamentals",
+      "description": "Discover the principles of ethical hacking and penetration testing.",
+      "level": "Intermediate",
+      "category": "Cybersecurity",
+      "price": 399,
+      "duration": 12,
+      "maxEnrollment": 20
+    },
+    {
+      "id": 15,
+      "title": "Introduction to Blockchain Technology",
+      "description": "Understand blockchain technology and its applications.",
+      "level": "Beginner",
+      "category": "Blockchain",
+      "price": 299,
+      "duration": 10,
+      "maxEnrollment": 25
+    },
+    {
+      "id": 16,
+      "title": "Social Media Marketing Strategies",
+      "description": "Learn effective strategies for social media marketing.",
+      "level": "Beginner",
+      "category": "Marketing",
+      "price": 199,
+      "duration": 6,
+      "maxEnrollment": 40
+    },
+    {
+      "id": 17,
+      "title": "Introduction to Robotics",
+      "description": "Learn the fundamentals of robotics and automation.",
+      "level": "Beginner",
+      "category": "Robotics",
+      "price": 349,
+      "duration": 12,
+      "maxEnrollment": 30
+    },
+    {
+      "id": 18,
+      "title": "Introduction to Artificial Intelligence",
+      "description": "Understand AI concepts and applications.",
+      "level": "Beginner",
+      "category": "Artificial Intelligence",
+      "price": 299,
+      "duration": 10,
+      "maxEnrollment": 25
+    },
+    {
+      "id": 19,
+      "title": "Introduction to UX/UI Design",
+      "description": "Learn the principles of user experience and interface design.",
+      "level": "Beginner",
+      "category": "Design",
+      "price": 249,
+      "duration": 8,
+      "maxEnrollment": 30
+    },
+    {
+      "id": 20,
+      "title": "Introduction to DevOps Practices",
+      "description": "Discover DevOps methodologies and tools.",
+      "level": "Intermediate",
+      "category": "DevOps",
+      "price": 399,
+      "duration": 12,
+      "maxEnrollment": 20
+    }
+  ]
+}
