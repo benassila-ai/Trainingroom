@@ -96,17 +96,6 @@ describe("View member component", () => {
     expect(mockNavigate).toHaveBeenCalledWith("/members");
   });
 
-  it.skip("renders nothing when member is not found", () => {
-    (useParams as jest.Mock).mockImplementation(() => ({ id: 2 }));
-    render(
-      <Provider store={store}>
-        <View />
-      </Provider>
-    );
-
-    expect(screen.getByText("memberDetails")).not.toBeInTheDocument();
-  });
-
   it('calls navigate function when back button is clicked', () => {
     const mockNavigate = jest.fn();
 
