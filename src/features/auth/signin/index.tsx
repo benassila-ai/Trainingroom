@@ -111,6 +111,7 @@ const Signin: React.FC = () => {
                   variant="outlined"
                   {...register("email")}
                   required
+                  data-testid="email"
                 />
                 {errors.email && (
                   <Box sx={{ mt: "3" }}>
@@ -130,6 +131,7 @@ const Signin: React.FC = () => {
                   required
                   type={isPasswordVisible ? "text" : "password"}
                   variant="outlined"
+                  data-testid="password"
                   slotProps={{
                     input: {
                       endAdornment: (
