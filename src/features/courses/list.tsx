@@ -2,13 +2,11 @@ import React, { ChangeEvent, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   Fab,
-  Grid2,
   IconButton,
   Paper,
   Table,
   TableBody,
   TableCell,
-  TableContainer,
   TableHead,
   TablePagination,
   TableRow,
@@ -20,6 +18,7 @@ import { Add, Delete, Edit, Preview } from "@mui/icons-material";
 import { selectCourses } from "./slice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { loadCoursesAction, removeCourseAction } from "./actions";
+import { TableContainer, Grid2 } from "./style";
 
 const Courses: React.FC = () => {
   const courses = useAppSelector(selectCourses);
@@ -39,7 +38,6 @@ const Courses: React.FC = () => {
 
   const handleDelete = (id: number): void => {
     dispatch(removeCourseAction.request(id))
-    console.log(`Delete item ${id}`);
   };
 
   const handleChangePage = (event: any, newPage: number) => {
@@ -69,7 +67,6 @@ const Courses: React.FC = () => {
         <Fab
           variant="extended"
           color="success"
-          sx={{ mr: 10 }}
           component={Link}
           to="/courses/new"
         >
@@ -78,7 +75,7 @@ const Courses: React.FC = () => {
         </Fab>
       </Grid2>
       <Paper elevation={4}>
-        <TableContainer sx={{ minWidth: 650, marginTop: 5 }}>
+        <TableContainer>
           <Table>
             <TableHead>
               <TableRow>
