@@ -9,6 +9,8 @@ import {
 } from "./slice";
 import { signupAction } from "./actions";
 import { getType } from "typesafe-actions";
+import { ClaimsType } from '../typings';
+import { RootState } from '../../../store';
 
 describe("Signup slice", () => {
   describe("slice initial state", () => {
@@ -30,7 +32,7 @@ describe("Signup slice", () => {
     });
 
     it("should handle saveClaimsAction", () => {
-      const claims = { userId: "12345", role: "teacher" };
+      const claims: ClaimsType = { email: "email", iat: 33, exp: 88, sub: 'sub' };
       const nextState = signupSlice.reducer(
         initialState,
         saveClaimsAction(claims)
@@ -68,17 +70,17 @@ describe("Signup slice", () => {
     const state = {
       signup: {
         token: "training-token",
-        claims: { userId: "12345", role: "student" },
+        claims:  { email: "email", iat: 33, exp: 88, sub: 'sub' },
         signupState: "completed",
       },
-    };
+    } as RootState;
 
     it("should select the token", () => {
       expect(selectToken(state)).toEqual("training-token");
     });
 
     it("should select the claims", () => {
-      expect(selectClaims(state)).toEqual({ userId: "12345", role: "student" });
+      expect(selectClaims(state)).toEqual({ email: "email", iat: 33, exp: 88, sub: 'sub' });
     });
 
     it("should select the signupState", () => {
