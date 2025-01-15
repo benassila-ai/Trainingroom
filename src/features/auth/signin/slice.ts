@@ -12,7 +12,7 @@ type signinState = {
   signinState: string | null;
 };
 
-const initialState: signinState = {
+export const initialState: signinState = {
   token: '',
   claims: null,
   signinState: null,
