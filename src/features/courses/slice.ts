@@ -17,14 +17,14 @@ type CoursesState = {
   removeState: null | "pending" | "completed" | "error";
 };
 
-const initialState: CoursesState = {
+export const initialState: CoursesState = {
   courses: [],
   loadingState: null,
   saveState: null,
   removeState: null,
 };
 
-const coursesSlice = createSlice({
+export const coursesSlice = createSlice({
   name: coursesNamespace,
   initialState,
   reducers: {},
