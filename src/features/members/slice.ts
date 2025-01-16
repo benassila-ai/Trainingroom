@@ -12,13 +12,13 @@ type MembersState = {
   saveState: null | "pending" | "completed" | "error" | string;
 };
 
-const initialState: MembersState = {
+export const initialState: MembersState = {
   members: [],
   loadingState: null,
   saveState: null,
 };
 
-const membersSlice = createSlice({
+export const membersSlice = createSlice({
   name: membersNamespace,
   initialState,
   reducers: {},
