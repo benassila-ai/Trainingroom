@@ -1,15 +1,21 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
 import { ActionType, getType } from "typesafe-actions";
-import { RootState } from "../../store";
 import {
   loadCoursesAction,
   saveCourseAction,
   removeCourseAction,
 } from "./actions";
 import { Course } from "./typings";
+import { RootState } from "../../store";
 
+/**
+ * Namespace for the courses slice in the Redux store.
+ */
 export const coursesNamespace = "courses";
 
+/**
+ * Type definition for the courses state.
+ */
 type CoursesState = {
   courses: Course[];
   loadingState: null | "pending" | "completed" | "error";
@@ -17,6 +23,9 @@ type CoursesState = {
   removeState: null | "pending" | "completed" | "error";
 };
 
+/**
+ * Initial state for the courses slice.
+ */
 export const initialState: CoursesState = {
   courses: [],
   loadingState: null,
@@ -24,11 +33,15 @@ export const initialState: CoursesState = {
   removeState: null,
 };
 
+/**
+ * Redux slice for managing courses state.
+ */
 export const coursesSlice = createSlice({
   name: coursesNamespace,
   initialState,
   reducers: {},
   extraReducers: (builder) => {
+    // Handle loadCoursesAction
     builder
       .addCase(getType(loadCoursesAction.request), (state) => {
         state.loadingState = "pending";
@@ -46,6 +59,7 @@ export const coursesSlice = createSlice({
           state.loadingState = "error";
         }
       );
+    // Handle saveCourseAction
     builder
       .addCase(getType(saveCourseAction.request), (state) => {
         state.saveState = "pending";
@@ -70,6 +84,7 @@ export const coursesSlice = createSlice({
           state.saveState = "error";
         }
       );
+    // Handle removeCourseAction
     builder
       .addCase(getType(removeCourseAction.request), (state) => {
         state.removeState = "pending";
@@ -90,12 +105,24 @@ export const coursesSlice = createSlice({
   },
 });
 
-// Selectors
+/**
+ * Selector to get the list of courses from the state.
+ */
 export const selectCourses = (state: RootState) => state.courses.courses;
+/**
+ * Selector to get the loading state from the state.
+ */
 export const selectLoadingState = (state: RootState) =>
   state.courses.loadingState;
+/**
+ * Selector to get the save state from the state.
+ */
 export const selectSaveState = (state: RootState) => state.courses.saveState;
 
+/**
+ * Selector to get a specific course by its ID.
+ * If the course is not found, returns a default course object.
+ */
 export const selectCourse = createSelector(
   [selectCourses, (state: RootState, id?: number) => id],
   (courses, id) => {
@@ -115,6 +142,10 @@ export const selectCourse = createSelector(
   }
 );
 
+/**
+ * Selector to get the title of a specific course by its ID.
+ * If the course is not found, returns an empty string.
+ */
 export const selectCourseTitle = createSelector(
 	[selectCourses, (state: RootState, id?: number) => id],
 	(courses, id) => {

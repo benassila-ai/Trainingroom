@@ -4,25 +4,39 @@ import { RootState } from "../../store";
 import { loadMembersAction, saveMemberAction } from "./actions";
 import { Member } from "../../typings";
 
+
+/**
+ * Namespace for the members slice in the Redux store.
+ */
 export const membersNamespace = "members";
 
+/**
+ * Type definition for the members state.
+ */
 type MembersState = {
   members: Member[];
   loadingState: null | "pending" | "completed" | "error";
   saveState: null | "pending" | "completed" | "error" | string;
 };
 
+/**
+ * Initial state for the members slice.
+ */
 export const initialState: MembersState = {
   members: [],
   loadingState: null,
   saveState: null,
 };
 
+/**
+ * Redux slice for managing members state.
+ */
 export const membersSlice = createSlice({
   name: membersNamespace,
   initialState,
   reducers: {},
   extraReducers: (builder) => {
+    // Handle loadMembersActio
     builder
       .addCase(getType(loadMembersAction.request), (state) => {
         state.loadingState = "pending";
@@ -40,6 +54,7 @@ export const membersSlice = createSlice({
           state.loadingState = "error";
         }
       );
+    // Handle saveMemberAction
     builder
       .addCase(getType(saveMemberAction.request), (state) => {
         state.saveState = "pending";
@@ -64,12 +79,26 @@ export const membersSlice = createSlice({
   },
 });
 
-// Selectors
+/**
+ * Selector to get the list of members from the state.
+ */
 export const selectMembers = (state: RootState) => state.members.members;
+
+/**
+ * Selector to get the loading state from the state.
+ */
 export const selectLoadingState = (state: RootState) =>
   state.members.loadingState;
+
+/**
+ * Selector to get the save state from the state.
+ */
 export const selectSaveState = (state: RootState) => state.members.saveState;
 
+/**
+ * Selector to get a specific member by their ID.
+ * If the member is not found, returns a default member object.
+ */
 export const selectMember = createSelector(
   [selectMembers, (state: RootState, id?: number) => id],
   (members, id) => {
