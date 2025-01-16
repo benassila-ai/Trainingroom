@@ -1,4 +1,4 @@
-## Summary of the Application
+## Summary of the application
 
 The application, named "trainingroom", is a React-based web application designed for managing training-related functionalities. It is built using modern front-end technologies and follows best practices for state management, form handling, and testing. The application is designed to be scalable and maintainable, with a focus on clean code and adherence to best practices. It includes features such as user authentication, authorization, data management, and internationalization support.
 The project uses JSON Server as a mock backend, which is configured to serve data from `db.json`. 
