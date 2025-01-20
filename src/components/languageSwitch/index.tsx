@@ -10,7 +10,7 @@ import { InputLabel } from "./style";
  *
  * @returns A JSX element with a dropdown menu for selecting the language of the application.
  */
-const LnaguageSwitch: React.FC = () => {
+const LanguageSwitch: React.FC = () => {
   const { i18n, t } = useTranslation();
 
   const languages = [
@@ -53,4 +53,4 @@ const LnaguageSwitch: React.FC = () => {
   );
 };
 
-export default LnaguageSwitch;
+export default LanguageSwitch;
