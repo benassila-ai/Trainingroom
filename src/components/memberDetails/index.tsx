@@ -7,6 +7,7 @@ import { RootState } from "../../store";
 import { selectCourseTitle, selectCourses } from "../../features/courses/slice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { loadCoursesAction } from "../../features/courses/actions";
+import { StyledTypography } from "./style";
 
 type MemberDetailsProps = {
   member: Member;
@@ -41,58 +42,28 @@ const MemberDetails: React.FC<MemberDetailsProps> = (props) => {
       <CardContent>
         <Grid2 container direction="column" spacing={5}>
           <Stack direction="row" spacing={5} alignItems="left">
-            <Typography
-              variant="h6"
-              sx={{
-                minWidth: "250px",
-                textAlign: "left",
-              }}
-            >
-              {t("fullName")}:
-            </Typography>
-            <Typography variant="body1" sx={{ textAlign: "left" }}>
+            <StyledTypography variant="h6">{t("fullName")}:</StyledTypography>
+            <Typography variant="subtitle1">
               {fullname}
             </Typography>
           </Stack>
           <Stack direction="row" spacing={5} alignItems="left">
-            <Typography
-              variant="h6"
-              sx={{
-                minWidth: "250px",
-                textAlign: "left",
-              }}
-            >
-              {t("role")}:
-            </Typography>
-            <Typography variant="body1" sx={{ textAlign: "left" }}>
+            <StyledTypography variant="h6">{t("role")}:</StyledTypography>
+            <Typography variant="subtitle1" >
               {role}
             </Typography>
           </Stack>
           <Stack direction="row" spacing={5} alignItems="left">
-            <Typography
-              variant="h6"
-              sx={{
-                minWidth: "250px",
-                textAlign: "left",
-              }}
-            >
-              {t("email")}:
-            </Typography>
-            <Typography variant="body1" sx={{ textAlign: "left" }}>
+            <StyledTypography variant="h6">{t("email")}:</StyledTypography>
+            <Typography variant="subtitle1" >
               {email}
             </Typography>
           </Stack>
           <Stack direction="row" spacing={5} alignItems="left">
-            <Typography
-              variant="h6"
-              sx={{
-                minWidth: "250px",
-                textAlign: "left",
-              }}
-            >
+            <StyledTypography variant="h6">
               {role === "student" ? t("enrolledCourses") : t("coursesTaught")}:
-            </Typography>
-            <Typography variant="body1" sx={{ textAlign: "left" }}>
+            </StyledTypography>
+            <Typography variant="subtitle1" sx={{ textAlign: "left" }}>
               {courses.map((courseId) => (
                 <TitleComponent key={courseId} courseId={courseId} />
               ))}
