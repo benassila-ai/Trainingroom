@@ -64,6 +64,7 @@
     ]
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.7",
     "concurrently": "^9.1.0",
     "json-server": "^0.17.4",
     "json-server-auth": "^2.1.0"
