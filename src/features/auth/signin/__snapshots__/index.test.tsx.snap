@@ -114,10 +114,14 @@ exports[`Signin component snapshots should match snapshot 1`] = `
                   class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-aixiz9-MuiButtonBase-root-MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-53g0n7-MuiButtonBase-root-MuiIconButton-root"
+                    id=":r2:"
                     tabindex="0"
                     type="button"
                   >
+                    <span
+                      class="MuiIconButton-loadingIndicator css-165vu30-MuiIconButton-loadingIndicator"
+                    />
                     <svg
                       aria-hidden="true"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
@@ -156,7 +160,8 @@ exports[`Signin component snapshots should match snapshot 1`] = `
           </div>
           <div />
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess MuiButton-fullWidth css-a9xcdz-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess MuiButton-fullWidth css-btdxmb-MuiButtonBase-root-MuiButton-root"
+            id=":r3:"
             tabindex="0"
             type="submit"
           >
